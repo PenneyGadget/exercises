@@ -28,5 +28,4 @@ class Squares
     square_of_sums - sum_of_squares
   end
 
-
 end
