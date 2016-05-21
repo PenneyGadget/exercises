@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
+require 'minitest/emoji'
 require_relative 'sieve'
 
 class SieveTest < Minitest::Test
@@ -12,6 +13,11 @@ class SieveTest < Minitest::Test
   def test_find_first_prime
     expected = [2]
     assert_equal expected, Sieve.new(2).primes
+  end
+
+  def test_find_first_two_primes
+    expected = [2, 3]
+    assert_equal expected, Sieve.new(3).primes
   end
 
   def test_find_primes_up_to_10
