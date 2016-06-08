@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 gem 'minitest', '>= 5.0.0'
 require 'minitest/autorun'
+require 'minitest/pride'
 
 require_relative 'food_chain'
 
@@ -46,7 +47,6 @@ class FoodChainTest < Minitest::Test
   # If you are curious, read more about constants on RubyDoc:
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
   def test_version
-    skip
     assert_equal 2, FoodChain::VERSION
   end
 end
